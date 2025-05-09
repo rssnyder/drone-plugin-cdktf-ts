@@ -1,6 +1,6 @@
 ARG TOFU="1.9.0"
 ARG NODE="24"
-ARG CDKTF="v0.20.12"
+ARG CDKTF="0.20.12"
 
 FROM ghcr.io/opentofu/opentofu:${TOFU} as tf
 
@@ -10,7 +10,7 @@ ARG CDKTF
 
 COPY --from=tf /usr/local/bin/tofu /usr/local/bin/tofu
 
-RUN npm install --global cdktf-cli@${CDKTF}
+RUN npm install --global cdktf-cli@v${CDKTF}
 
 COPY plugin.sh /usr/local/bin/plugin.sh
 

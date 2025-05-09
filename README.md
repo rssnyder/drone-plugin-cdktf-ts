@@ -2,7 +2,7 @@
 
 a drone plugin to execute cdktf within a harness pipeline
 
-images are tagged with `node<version>-cdktf<version>` and you can browse published versions on [dockerhub](https://hub.docker.com/r/harnesscommunity/drone-plugin-cdktf-ts/tags)
+images are tagged with `node<version>-tofu<version>-cdktf<version>` and you can browse published versions on [dockerhub](https://hub.docker.com/r/harnesscommunity/drone-plugin-cdktf-ts/tags)
 
 ## Options
 
