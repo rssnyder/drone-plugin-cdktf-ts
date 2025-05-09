@@ -2,6 +2,8 @@
 
 a drone plugin to execute cdktf within a harness pipeline
 
+images are tagged with `node<version>-cdktf<version>` and you can browse published versions on [dockerhub](https://hub.docker.com/r/harnesscommunity/drone-plugin-cdktf-ts/tags)
+
 ## Options
 
 `PLUGIN_CODE_DIR`: directory in your repo where the CDKTF code is located
