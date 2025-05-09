@@ -47,7 +47,11 @@ in an iacm pipeline:
 
 where you will need to set `CDKTF_DIR` and an environment variable in your workspace to be the relitive location of your CDKTF code in your repo, and `CDKTF_APP` is set to the name of the app you want to synthisize for your pipeline.
 
+![image](https://github.com/user-attachments/assets/408726f2-7ee7-4533-ba24-90130f95cb76)
+
 the `folderPath` on your workspace should be set and end in `stacks/<app name>` to follow the standard output scheme of CDKTF.
+
+![image](https://github.com/user-attachments/assets/f69a1e32-b525-44e2-87d9-74954ae0c1d4)
 
 ## testing
 
