@@ -29,7 +29,7 @@ for the aws provider:
 
 ## usage
 
-in an iacm pipeline:
+in an iacm pipeline, this plugin **must** be used before any tofu steps, as they all need the tf code to exist locally:
 
 ```
 - step:
