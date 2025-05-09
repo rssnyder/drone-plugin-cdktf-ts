@@ -14,6 +14,17 @@ a drone plugin to execute cdktf within a harness pipeline
 
 `PLUGIN_HCL` (optional): if set, generate output in HCL instead of JSON (default)
 
+## preperation
+
+this plugin uses opentofu, as such to work with cdktf you will need to set the providers in your `cdktf.json` to reference the opentofu registry:
+
+for the aws provider:
+```
+  "terraformProviders": [
+    "registry.opentofu.org/hashicorp/aws@5.33.0"
+  ],
+```
+
 ## usage
 
 in an iacm pipeline:
@@ -35,3 +46,12 @@ in an iacm pipeline:
 where you will need to set `CDKTF_DIR` and an environment variable in your workspace to be the relitive location of your CDKTF code in your repo, and `CDKTF_APP` is set to the name of the app you want to synthisize for your pipeline.
 
 the `folderPath` on your workspace should be set and end in `stacks/<app name>` to follow the standard output scheme of CDKTF.
+
+## testing
+
+from the location of your cdftf code:
+
+```
+rm -rf .gen cdktf.out node_modules;
+docker run -v ${PWD}:/harness -e PLUGIN_CODE_DIR=/harness -e PLUGIN_APP=app -it drone-plugin-cdktf-ts
+```
